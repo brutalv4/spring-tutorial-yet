@@ -9,6 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <!--maven compiler configuration-->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
         <spring.groupId>org.springframework</spring.groupId>
         <spring.version>3.2.13.RELEASE</spring.version>
     </properties>
