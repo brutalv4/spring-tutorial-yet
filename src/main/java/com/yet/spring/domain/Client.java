@@ -10,6 +10,9 @@ public class Client {
         this.fullName = fullName;
     }
 
+    public Client() {
+    }
+
     public String getId() {
         return id;
     }
