@@ -2,6 +2,8 @@ package com.yet.spring;
 
 import com.yet.spring.domain.Client;
 import com.yet.spring.domain.EventLogger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
     private Client client;
@@ -13,8 +15,11 @@ public class App {
     }
 
     public static void main(String[] args) {
-        App app = new App();
-        app.logEvent("Some event for user 1");
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        App app = context.getBean("app", App.class);
+        app.logEvent("Some event for 1");
+        app.logEvent("Some event for 2");
     }
 
     public void logEvent(String msg) {
